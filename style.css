@@ -1,0 +1,198 @@
+@font-face {
+  /* This is the name you will use to refer to the font */
+  font-family: 'JostMedium';
+
+  /* This is the path to your font file, relative to the CSS file */
+  src: url('assets/fonts/Jost-Medium.ttf') format('truetype');
+  
+  /* You can also specify the weight and style */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  /* This is the name you will use to refer to the font */
+  font-family: 'JostLight';
+
+  /* This is the path to your font file, relative to the CSS file */
+  src: url('assets/fonts/Jost-Light.ttf') format('truetype');
+  
+  /* You can also specify the weight and style */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+:root {
+    /* Official DOSB Color Palette & Style */
+    --gold-background: #f4eddb;
+    --silver-background: #eaecf1;
+    --bronze-background: #eeded8;
+    --table-radius: 20px;
+    --button-radius: 8px;
+
+    --button-primary-bacround: linear-gradient(266.74deg,#fed286 2.96%,#fcb131);
+    --button-secondary-background: #cbd5e1; 
+
+    --dosb-blau: #005A94;
+    --dosb-rot: #E60026;
+    --dosb-gold: #B99400;
+    --text-color: #212529;
+    --text-color-light: #6c757d;
+    --background-color: #fff;
+    --ui-background: #f8f9fa;
+    --border-color: #dee2e6;
+    --border-radius: 0.25rem; /* 4px */
+    --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --font-family: Roboto,-apple-system,Helvetica Neue,Helvetica,Arial,"sans-serif";
+    --font-family-headline: JostLight,sans-serif;
+
+    /* Medal Colors */
+    --gold: #FFD700;
+    --silber: #C0C0C0;
+    --bronze: #CD7F32;
+}
+
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+.logo {
+    max-height: 50px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+h1, h2 {
+    font-weight: 700;
+    font-family: var(--font-family-headline);
+}
+
+h1 { margin: 0 0 0.5rem 0; font-size: 2rem; }
+h2 { margin-top: 0; padding-bottom: 0.5rem; font-size: 1.5rem; border-bottom: 2px solid var(--dosb-rot); }
+header p { color: var(--text-color-light); margin: 0; font-size: 1.1rem; }
+
+.card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
+}
+
+.input-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+.input-group { margin-bottom: 1rem; }
+label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+select:focus, input[type="text"]:focus {
+    border-color: var(--dosb-blau);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(0, 90, 148, 0.25);
+}
+
+hr.divider { border: none; border-top: 1px solid var(--border-color); margin: 1.5rem 0; }
+
+button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background-color: var(--dosb-blau);
+    border: 1px solid var(--dosb-blau);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    margin-top: 0;
+}
+#add-discipline-btn { background-color: var(--dosb-rot); border-color: var(--dosb-rot); }
+#add-discipline-btn:hover { background-color: #c4001f; border-color: #c4001f; }
+button:hover { background-color: #004573; border-color: #004573; }
+button:disabled { background-color: #adb5bd; border-color: #adb5bd; cursor: not-allowed; }
+
+.performance-slot {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-left-width: 5px;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    background-color: var(--ui-background);
+}
+.performance-slot.bronze { border-left-color: var(--bronze); }
+.performance-slot.silber { border-left-color: var(--silber); }
+.performance-slot.gold { border-left-color: var(--gold); }
+.performance-slot.fail { border-left-color: var(--dosb-rot); }
+
+.slot-header { display: flex; justify-content: space-between; align-items: center; font-weight: bold; }
+.slot-header span:first-child { color: var(--text-color); }
+.slot-points { font-size: 1.2em; color: var(--dosb-blau); }
+.slot-body { margin-top: 1rem; }
+.slot-body p { margin: 0 0 10px 0; font-size: 0.9em; color: var(--text-color-light); }
+.slot-input-group { display: flex; gap: 10px; }
+.slot-input-group button { width: auto; font-size: 1em; padding: 0.5rem 1rem; }
+
+#final-result-wrapper { margin-top: 1.5rem; }
+.final-result-card { text-align: center; padding: 1.5rem; background: var(--ui-background); border: 1px solid var(--border-color); border-radius: var(--border-radius); }
+#final-medal { font-size: 3em; margin-top: 0.5rem; }
+#final-result-text { font-size: 1.5em; margin: 0; font-weight: bold; color: var(--dosb-blau); }
+
+.actions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+
+.saved-record-item { background-color: #fff; border: 1px solid var(--border-color); border-radius: var(--border-radius); margin-bottom: 10px; box-shadow: var(--box-shadow); }
+.record-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem; font-weight: 600; }
+.record-info { font-size: 1.1em; }
+.record-info span { color: var(--dosb-blau); }
+.record-actions { display: flex; flex-wrap: nowrap; gap: 0.5rem; }
+.record-actions button { width: auto; font-size: 0.875rem; padding: 0.375rem 0.75rem; margin: 0; }
+.record-actions .details-btn { background-color: #6c757d; border-color: #6c757d; }
+.record-actions .details-btn.active { background-color: #5a6268; }
+.record-actions .edit-btn { background-color: var(--dosb-blau); border-color: var(--dosb-blau); }
+.record-actions .delete-btn { background-color: var(--dosb-rot); border-color: var(--dosb-rot); }
+
+.record-summary { max-height: 0; overflow: hidden; transition: max-height 0.35s ease-in-out, padding 0.35s ease-in-out; padding: 0 1rem; background: var(--ui-background); }
+.record-summary.visible { max-height: 500px; padding: 1rem; border-top: 1px solid var(--border-color); }
+.summary-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; font-size: 0.9em; }
+.summary-grid-item strong { color: var(--dosb-blau); }
+
+footer { text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); font-size: 0.9em; color: var(--text-color-light); }
+
+@media (max-width: 600px) {
+    .input-grid, .actions-grid { grid-template-columns: 1fr; }
+    .record-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+    .record-actions { width: 100%; display: flex; justify-content: flex-start; }
+}

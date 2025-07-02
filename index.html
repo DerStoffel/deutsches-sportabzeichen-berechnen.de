@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportabzeichen Rechner 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/img/DOSB_Deutsches_Sportabzeichen_Logo_Quer_RGB_Bunt.svg" alt="Deutsches Sportabzeichen Logo" class="logo">
+            <div>
+                <h1>Deutsches Sportabzeichen berechnen</h1>
+                <p>Für Kinder, Jugendliche und Erwachsene</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>1. Athlet &amp; Disziplin auswählen</h2>
+                <div class="input-group">
+                    <label for="athlete-name">Name des Athleten / der Athletin:</label>
+                    <input type="text" id="athlete-name" placeholder="z.B. Erika Mustermann">
+                </div>
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="age">Altersklasse:</label>
+                        <select id="age" name="age">
+                            <option value="6-7">6-7 Jahre</option>
+                            <option value="8-9">8-9 Jahre</option>
+                            <option value="10-11">10-11 Jahre</option>
+                            <option value="12-13">12-13 Jahre</option>
+                            <option value="14-15">14-15 Jahre</option>
+                            <option value="16-17">16-17 Jahre</option>
+                            <option value="18-19">18-19 Jahre</option>
+                            <option value="20-24">20-24 Jahre</option>
+                            <option value="25-29">25-29 Jahre</option>
+                            <option value="30-34">30-34 Jahre</option>
+                            <option value="35-39">35-39 Jahre</option>
+                            <option value="40-44">40-44 Jahre</option>
+                            <option value="45-49">45-49 Jahre</option>
+                            <option value="50-54">50-54 Jahre</option>
+                            <option value="55-59">55-59 Jahre</option>
+                            <option value="60-64">60-64 Jahre</option>
+                            <option value="65-69">65-69 Jahre</option>
+                            <option value="70-74">70-74 Jahre</option>
+                            <option value="75-79">75-79 Jahre</option>
+                            <option value="80-84">80-84 Jahre</option>
+                            <option value="85-89">85-89 Jahre</option>
+                            <option value="90+">ab 90 Jahre</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="gender">Geschlecht:</label>
+                        <select id="gender" name="gender">
+                            <option value="w">Weiblich</option>
+                            <option value="m">Männlich</option>
+                            <option value="d">Divers</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="disability">Behinderungsklasse:</label>
+                        <select id="disability" name="disability">
+                            <option value="none">Keine Behinderungsklasse</option>
+                            <option value="A">A - Allgemeine Behinderung</option>
+                            <option value="B1">B 1 - Einseitige Beinbehinderung (GdB 20 - 60)</option>
+                            <option value="B2">B 2 - Einseitige Beinbehinderung (GdB 70 - 100)</option>
+                            <option value="C1">C 1 - Beidseitige Beinbehinderung (GdB 20 - 60)</option>
+                            <option value="C2">C 2 - Beidseitige Beinbehinderung (GdB 70 - 100)</option>
+                            <option value="D1">D 1 - Einseitige Armbehinderung (GdB 20 - 60)</option>
+                            <option value="D2">D 2 - Einseitige Armbehinderung (GdB 70 - 100)</option>
+                            <option value="E1">E 1 - Beidseitige Armbehinderung (GdB 20 - 60)</option>
+                            <option value="E2">E 2 - Beidseitige Armbehinderung (GdB 70 - 100)</option>
+                            <option value="F1">F 1 - Sehschädigung</option>
+                            <option value="F2">F 2 - Blindheit</option>
+                            <option value="F3">F 3 - Schwerhörigkeit/Gehörlosigkeit mit Gleichgewichtsstörung</option>
+                            <option value="G1">G 1 - Geringe Einschränkung der Geh-/Stehfähigkeit ohne Einschränkung des Oberkörpers</option>
+                            <option value="G2">G 2 - Geringe Einschränkung der Geh-/Stehfähigkeit mit geringer Einschränkung des Oberkörpers</option>
+                            <option value="G3">G 3 - Erhebliche Einschränkung der Geh-/Stehfähigkeit mit erheblicher Einschränkung des Oberkörpers</option>
+                            <option value="H1">H 1 - Rollstuhlfahrer/in ohne Einschränkung des Oberkörpers</option>
+                            <option value="H2">H 2 - Rollstuhlfahrer/in mit geringer Einschränkung des Oberkörpers</option>
+                            <option value="H3">H 3 - Rollstuhlfahrer/in mit starker Einschränkung des Oberkörpers</option>
+                            <option value="H4">H 4 - Rollstuhlfahrer/in mit sehr starker Einschränkung des Oberkörpers</option>
+                            <option value="I">I - Geistige Behinderung</option>
+                            <option value="J">J - Kleinwuchs</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="discipline-group">Disziplingruppe:</label>
+                    <select id="discipline-group" name="discipline-group">
+                        <option value="ausdauer">Ausdauer</option>
+                        <option value="kraft">Kraft</option>
+                        <option value="schnelligkeit">Schnelligkeit</option>
+                        <option value="koordination">Koordination</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="discipline">Disziplin:</label>
+                    <select id="discipline" name="discipline"></select>
+                </div>
+                <button id="add-discipline-btn">Disziplin hinzufügen</button>
+            </div>
+
+            <div class="card">
+                <h2>2. Leistungen eintragen &amp; bewerten</h2>
+                <div id="performance-slots">
+                    </div>
+            </div>
+
+            <div id="final-result-wrapper">
+                 <div id="final-result-container" class="final-result-card" style="display: none;">
+                    <h2>Gesamtergebnis</h2>
+                    <p id="final-result-text">Herzlichen Glückwunsch!</p>
+                    <div id="final-medal"></div>
+                 </div>
+                 <div class="actions-grid">
+                    <button id="archive-btn" disabled>Abzeichen speichern</button>
+                    <button id="clear-btn">Neues Abzeichen starten</button>
+                 </div>
+            </div>
+
+            <div class="card">
+                <h2>Gespeicherte Abzeichen</h2>
+                <div id="saved-records-list">
+                    <p>Hier werden Ihre gespeicherten Abzeichen angezeigt.</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 - Alle Angaben ohne Gewähr. Daten basieren auf den DOSB-Leistungstabellen 2025.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
